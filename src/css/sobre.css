@@ -1,0 +1,38 @@
+.doceria img {
+    height: 650px;
+    width: auto;
+}
+.texto {
+    /* background-color: aquamarine; */
+    margin-top: 2vw;
+    width: 59vw;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vw;
+}
+
+.texto h1 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 500;
+    color: #A76A91;
+    text-align: left;
+}
+
+.texto p {
+    font-family: 'Rubik';
+    font-size: 20px;
+    font-weight: 500;
+    color: #531804;
+    text-align: justify;
+}
+
+.linha {
+    text-align: center;
+    border-top-width: 1px;
+    border-top-color: #F5EADD;
+    border-top-style:outset;
+    margin: 10px;
+}
+

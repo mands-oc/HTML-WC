@@ -1,0 +1,101 @@
+.cep-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cep-container input {
+    flex: 1;
+}
+
+.cep-container a {
+    font-family: 'Crimson Text';
+    font-size: 18px;
+    color: #531804;
+    /* text-decoration: underline; */
+}
+
+.cep-container img {
+    width: 15px;
+    height: 15px;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.linha div {
+    flex: 1;
+}
+
+.botao2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.botao2 button {
+    background-color: #531804;
+    color: #F5EADD;
+    font-family: 'Crimson Text';
+    font-size: 22px;
+    font-weight: 400;
+    width: 35%;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.titulo {
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.titulo h2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.controle-form {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.controle-form label {
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: 'Crimson Text';
+    font-size: 18px;
+}
+
+.controle-form input,
+select {
+    background-color: rgba(245, 234, 221, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.option {
+    color: #531804;
+}
+
+.conteudo {
+    /* background-color: blueviolet; */
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

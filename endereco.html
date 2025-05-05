@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whole Cake</title>
+    <link rel="shortcut icon" href="./src/imagens/Logotipo.png" type="logotipo">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="src/css/endereco.css">
+</head>
+
+<body>
+    <div id="pagina">
+        <div class="principal corpo">
+            <header>
+                <div class="logo">
+                    <img src="./src/imagens/Logotipo.png" alt="logotipo">
+                </div>
+                <div class="topo">
+                    <div class="menu" id="menu">
+                        <nav>
+                            <ul>
+                                <a href="index.html">
+                                    <li>HOME &gt;</li>
+                                </a>
+                                <a href="index.html">
+                                    <li>PRODUTOS &gt;</li>
+                                </a>
+                                <a href="sobre.html">
+                                    <li>SOBRE &gt;</li>
+                                </a>
+                                <a href="contato.html">
+                                    <li>CONTATO</li>
+                                </a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="botao">
+                        <div class="btn-icon">
+                            <img class="icon-btn" src="./src/imagens/Ícones/usuario-de-perfil.png" alt="">
+                            <button class="btn-menu">ENTRAR</button>
+
+                        </div>
+                    </div>
+                    <div class="carrinho">
+                        <img class="carrinho" src="./src/imagens/Ícones/carrinho-de-compras-marrom.png"
+                            alt="icon-carrinho de compras">
+                    </div>
+                </div>
+            </header>
+            <div class="conteudo">
+                <div class="titulo">
+                    <h2>Endereço de entrega:</h2>
+                </div>
+                <div>
+                    <form class="form" id="form" action="">
+                        <div class="controle-form">
+                            <label for="identificacao-endereco">Identificação do Endereço:</label>
+                            <input type="text" id="identificacao-endereco">
+                        </div>
+                        <div class="controle-form">
+                            <label for="destinatario">Destinatário:</label>
+                            <input type="text" id="destinatario">
+                        </div>
+                        <div class="controle-form">
+                            <label for="cep">CEP:</label>
+                            <div class="cep-container">
+                                <input type="text" id="cep" maxlength="9" oninput="cepMascara(this)">
+                                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php"
+                                    target="_blank">Não sei meu CEP</a>
+                                <img src="src/imagens/Ícones/seta-para-cima-direita-do-quadrado.png" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="link">
+                            <p>Não sei meu CEP:</p>
+                            <img src="src/imagens/Ícones/seta-para-cima-direita-do-quadrado.png" alt="">
+                        </div> -->
+                        <div class="controle-form">
+                            <label for="endereco">Endereço:</label>
+                            <input type="text" id="endereco">
+                        </div>
+                        <div class="linha">
+                            <div class="controle-form">
+                                <label for="numero">Número:</label>
+                                <input type="number" id="numero" min="0">
+                            </div>
+                            <div class="controle-form">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro">
+                            </div>
+                            <div class="controle-form">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" id="complemento">
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="controle-form">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade">
+                            </div>
+                            <div class="controle-form">
+                                <label for="estado">Estado:</label>
+                                <select class="option" id="estado">
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="controle-form">
+                            <label for="referencia">Referência:</label>
+                            <input type="text" id="referencia">
+                        </div>
+                        <div class="botao2">
+                            <button type="submit" id="cadastro">Cadastrar</button>
+                        </div>
+                    </form>
+
+                </div>
+                <script>
+                    function cepMascara(input) {
+                        let valor = input.value.replace(/\D/g, '');
+                        if (valor.length > 5) {
+                            valor = valor.slice(0, 5) + '-' + valor.slice(5, 8);
+                        }
+                        input.value = valor;
+                    }
+
+                    async function buscacep() {
+                        const cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+                        if (cep !== "") {
+                            try {
+                                const response = await fetch(`https://brasilapi.com.br/api/cep/v1/${cep}`);
+
+                                if (!response.ok) {
+                                    if (response.status === 404) {
+                                        alert("CEP inválido");
+                                    } else {
+                                        alert("Erro ao buscar o CEP");
+                                    }
+                                    return;
+                                }
+
+                                const endereco = await response.json();
+
+                                document.getElementById("endereco").value = endereco.street || '';
+                                document.getElementById("bairro").value = endereco.neighborhood || '';
+                                document.getElementById("cidade").value = endereco.city || '';
+                                document.getElementById("estado").value = endereco.state || '';
+
+                            } catch (error) {
+                                alert("Erro ao fazer a requisição");
+                                console.error(error);
+                            }
+                        }
+                    }
+
+                    window.onload = function () {
+                        const cepInput = document.getElementById("cep");
+                        cepInput.addEventListener("blur", buscacep);
+                    }
+                </script>
+
+            </div>
+        </div>
+        <footer>
+            <div class="icones">
+                <div class="email">
+                    <img src="./src/imagens/Ícones/o-email.png" alt="">
+                    <p>doceriawholecake@outlook.com</p>
+                </div>
+                <div class="redes">
+                    <img src="./src/imagens/Ícones/facebook.png" alt="">
+                    <img src="./src/imagens/Ícones/whatsapp.png" alt="">
+                    <img src="./src/imagens/Ícones/instagram.png" alt="">
+                </div>
+            </div>
+            <div class="desenvolvimento">
+                <p>© Copyright 2025. Todos os direitos reservados. | Endereço: R. Nove de Julho, 1289 - Centro.
+                    Araraquara - SP. CEP 14801-295</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

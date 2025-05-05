@@ -1,0 +1,142 @@
+.bolo-int img {
+    /* background-color: aqua; */
+    height: 400px;
+    width: 540px;
+}
+
+.boloint {
+    /* background-color: blue; */
+    height: 1000px;
+
+}
+
+.linha {
+    /* background-color: chartreuse; */
+    width: 1160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.botao2 {
+    /* background-color: blue; */
+    height: 50px;
+    width: 500px;
+}
+
+.btn-carrinho {
+    width: 200px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-carrinho {
+    padding: 4px;
+    height: 30px;
+    width: 250px;
+    background-color: #531804;
+    font-family: "Rubik";
+    color: #F5EADD;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: space-around;
+}
+
+.iconcar-btn {
+    /* background-color: blue; */
+    height: auto;
+    width: auto;
+}
+
+.titulo-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    height: 80px;
+}
+
+.titulo-icon h3 {
+    font-family: 'Rubik';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.icondoc {
+    /* background-color: aqua; */
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    display: inline;
+}
+
+.icon-doc {
+    /* background-color: blue; */
+    height: 20px;
+    width: 20px;
+    justify-content: auto;
+}
+
+.descricao p {
+    /* background-color: aliceblue; */
+    margin-bottom: 3%;
+    font-size: 18px;
+    width: 650px;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.descricao h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    font-size: 25px;
+    height: 80px;
+}
+
+.descricao {
+    /* background-color: aquamarine; */
+    font-size: 15px;
+}
+
+.descricao2 h2 {
+    /* background-color: red; */
+    width: 500px;
+    height: 60px;
+    font-family: 'Rubik';
+    margin-top: 10%;
+}
+
+
+.teste {
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 210px;
+}
+
+.texto {
+    font-family: 'Nunito sans';
+}
+
+.texto2 {
+    margin-top: -15px;
+}
+
+.btn-menu {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bolo-ped img {
+    height: 400px;
+    width: 540px;
+}

@@ -1,0 +1,56 @@
+.linha{
+    justify-content: right;
+    justify-content: space-between;
+}
+
+.tab-teste{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.tab-teste h3{
+    margin-right: 4px;
+}
+
+
+.doce{
+    /* background-color: blue; */
+    margin-bottom: 10%;
+}
+.descricao1 h1{
+    /* background-color: aqua; */
+    font-size: 30px;
+}
+.descricao1 h2{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px; 
+    margin-top: 5%;
+}
+.descricao1 p{
+    /* background-color: salmon; */
+    font-family: 'Nunito sans';
+    font-size: 18px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao1{
+    /* background-color: green; */
+    height: 250px;
+    width: 500px;
+    justify-content:  space-between;    
+}
+
+.brigadeiro img {
+    margin-left: 0; 
+    height: 400px;
+    width: 515px;
+}
+

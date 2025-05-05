@@ -1,0 +1,79 @@
+.controle-form{
+    padding-bottom: 20px ;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.controle-form label{
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: 'Crimson Text';
+    font-size: 18px;
+}
+
+.controle-form input, textarea{
+    background-color: rgba(245, 234, 221, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.controle-form textarea{
+    resize:none;
+}
+
+.botao2{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;  
+    margin-bottom: 25px;  
+}
+
+.botao2 button{
+    background-color:  #531804;;
+    color: #FFFFFF;
+    font-family: 'Crimson Text';
+    font-size: 22px;
+    font-weight: 400;
+    width: 20%;
+    border: none;
+    padding: 10px;
+    border-radius: 60px;
+    cursor:pointer;
+}
+
+.conteudo {
+    /* background-color: blueviolet; */
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.titulo {
+    /* background-color: brown; */
+    color: #531804;
+    font-family: 'Rubik';
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.titulo h2{
+    font-family: 'Rubik';
+    font-weight: 600;
+    margin-top: 25px;
+    letter-spacing: 0.05em;
+    margin-bottom: 50px;
+}
+
+.politica {
+    margin-top: 25px;
+    font-family: 'Crimson Text';
+}
+

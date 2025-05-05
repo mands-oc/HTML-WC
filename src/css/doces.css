@@ -1,0 +1,80 @@
+.banner img{
+    height: 650px;
+    width: 1137.5px;
+}
+
+.banner{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+
+}
+.titulo h2{
+    font-size: 50px;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+.titulo h3{
+    font-size: 35px;
+    margin-top: 3%;
+}
+.doces{
+    /* background-color: aqua; */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+.doce img{
+    width: 12vw;
+    height: 10vw;
+}
+.linha{
+    /* background-color: aqua; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.doce p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.doce{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-bolo{
+    /* background-color: blueviolet; */
+    width: 100px;
+    height: 30px;
+    margin-top: 5%;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn{
+    font-family: "Rubik";
+    font-weight: 400;
+    color: #F5EADD;
+    background-color: #531804;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 20px;
+    cursor: pointer;
+}

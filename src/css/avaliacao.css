@@ -1,0 +1,124 @@
+.botao2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.botao2 button {
+    background-color: #531804;
+    color: #F5EADD;
+    font-family: 'Crimson Text';
+    font-size: 22px;
+    font-weight: 400;
+    width: 40%;
+    border: none;
+    padding: 10px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.estrelas {
+    color: #EDAE1D;
+}
+
+.avaliacoes-recentes {
+    border: none;
+    background-color: rgba(245, 234, 221, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 250px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.avaliacao p {
+    font-family: 'Rubik';
+}
+
+.avaliacao p.nome {
+    font-weight: 500;
+}
+.avaliacao {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nome-estrelas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.texto {
+    margin-bottom: 32px;
+    margin-left: 16px;
+}
+
+.titulo {
+    margin-top: 15%;
+    margin-bottom: 24px;
+}
+
+.titulo h2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.controle-form {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.controle-form label {
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: 'Crimson Text';
+    font-size: 18px;
+}
+
+.controle-form input,
+select,
+textarea {
+    background-color: rgba(245, 234, 221, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.controle-form textarea {
+    resize: none;
+}
+
+
+.option {
+    color: #EDAE1D;
+}
+
+.conteudo {
+    /* background-color: blueviolet; */
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.div-text {
+    border-bottom: solid 1px;
+    border-bottom-color: #531804;
+}

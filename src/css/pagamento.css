@@ -1,0 +1,149 @@
+.titulo {
+    color: #531804;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.titulo h2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.conteudo {
+    background-color: transparent;
+    width: 60%;
+    border: 1px solid #531804;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pagamento button {
+    background-color: #531804;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 400;
+    color: #F5EADD;
+    cursor: pointer;
+    border: none;
+}
+
+.pagamento {
+    background-color: #531804;
+    height: 50px;
+    width: 90%;
+    border: none;
+    /* text-align: center; */
+    margin-left: 5%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* sombra */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.linha div {
+    flex: 1;
+}
+
+.controle-form {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.controle-form label, input, select, .ativacao {
+    display: flex;
+    font-family: 'Crimson Text';
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+
+.controle-form input, select {
+    background-color: rgba(245, 234, 221, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+} 
+
+.ativacao input {
+    width: 13px;
+    height: 13px;
+    align-items: center;
+}
+
+.ativacao label {
+    font-family: 'Crimson Text';
+    font-size: 16px;
+}
+
+.parcela {
+    color: #531804;
+}
+
+
+.pagamento:hover {
+    transform: scale(1.05);
+}
+.forma-de-pagamento {
+    height: 30px;
+    width: 30px;
+}
+
+.verificacao {
+    height: 25px;
+    width: 25px;
+}
+
+.botao2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 25px;
+}
+
+.botao2 button {
+    background-color: #531804;
+    color: #F5EADD;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    width: 50%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.metodo-pagamento {
+    width: 50%;
+    margin: 24px;
+
+}
+
+.formulario {
+    width: 50%;
+    margin: 24px;
+}
+
+
