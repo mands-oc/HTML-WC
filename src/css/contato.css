@@ -1,28 +1,28 @@
-.conteudo{
-    margin-bottom: 200px;
+.conteudo {
+    margin-bottom: 80px;
     /* background-color: chartreuse; */
 }
 
-.imagem img{
+.imagem img {
     width: 1137.5px;
     height: 650px;
 }
 
 
-.msg{
-    color: #531804;
-    font-family: 'Rubik';
-    font-size: 18px;
-    font-weight: 600;
+.msg {
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
-.msg h2{
-    margin-top: 25px;
-    margin-bottom: 25px;
+.msg h2 {
+    color: #531804;
+    font-family: 'Rubik';
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.dentro{
+.dentro {
     margin-top: 5vh;
     width: 45vw;
     margin-left: auto;
@@ -30,13 +30,13 @@
     padding: 20px;
 }
 
-.controle-form{
-    padding-bottom: 20px ;
+.controle-form {
+    padding-bottom: 20px;
     margin-bottom: 10px;
     position: relative;
 }
 
-.controle-form label{
+.controle-form label {
     display: flex;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -44,7 +44,8 @@
     font-size: 18px;
 }
 
-.controle-form input, textarea{
+.controle-form input,
+textarea {
     background-color: rgba(245, 234, 221, 0.5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 16px;
@@ -54,19 +55,19 @@
     border: none;
 }
 
-.controle-form textarea{
-    resize:none;
+.controle-form textarea {
+    resize: none;
 }
 
-.botao2{
+.botao2 {
     width: 100%;
     display: inline-flex;
-    justify-content: center;    
+    justify-content: center;
 }
 
-.botao2 button{
-    background-color:  #531804;;
-    color: #FFFFFF;
+.botao2 button {
+    background-color: #531804;
+    color: #F5EADD;
     font-family: 'Crimson Text';
     font-size: 22px;
     font-weight: 400;
@@ -74,5 +75,5 @@
     border: none;
     padding: 10px;
     border-radius: 60px;
-    cursor:pointer;
+    cursor: pointer;
 }

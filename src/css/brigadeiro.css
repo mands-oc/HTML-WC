@@ -20,7 +20,9 @@
 }
 .descricao1 h1{
     /* background-color: aqua; */
-    font-size: 30px;
+    font-family: 'Rubik';
+    font-size: 28px;
+    font-weight: 600;
 }
 .descricao1 h2{
     /* background-color: aqua; */
@@ -28,13 +30,22 @@
     justify-content: center;
     align-items: center;
     height: 60px;
+    font-family: 'Rubik';
     font-size: 22px; 
+    font-weight: 600;
     margin-top: 5%;
+}
+
+.descricao1 h3{
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 600;
 }
 .descricao1 p{
     /* background-color: salmon; */
     font-family: 'Nunito sans';
     font-size: 18px;
+    font-weight: 500;
     height: 100px;
     display: flex;
     justify-content: center;

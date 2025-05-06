@@ -12,8 +12,8 @@
     font-size: 22px;
     font-weight: 400;
     width: 40%;
-    border: none;
     padding: 10px;
+    border: none;
     border-radius: 60px;
     cursor: pointer;
 }
@@ -32,6 +32,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 6px;
+    margin-bottom: 80px;
 }
 
 .avaliacao p {
@@ -74,6 +75,13 @@
     font-weight: 600;
 }
 
+.titulo2 {
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5%;
+}
+
 .controle-form {
     padding-bottom: 20px;
     margin-bottom: 10px;
@@ -107,6 +115,7 @@ textarea {
 
 .option {
     color: #EDAE1D;
+    cursor: pointer;
 }
 
 .conteudo {
