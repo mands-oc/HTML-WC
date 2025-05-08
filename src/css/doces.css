@@ -41,6 +41,7 @@
 .doce img{
     width: 12vw;
     height: 10vw;
+    cursor: pointer;
 }
 .linha{
     /* background-color: aqua; */
@@ -82,4 +83,9 @@
     width: 85px;
     height: 25px;
     cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #F5EADD;
+    color: #531804;
 }

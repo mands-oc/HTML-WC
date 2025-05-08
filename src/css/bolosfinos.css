@@ -51,6 +51,11 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.btn-escolha:hover {
+    background-color: #F5EADD;
+    color: #531804;
+}
 .bolos{
     /* background-color: aqua; */
     width: 80%;
@@ -81,6 +86,7 @@
 .bolo img{
     width: 20vw;
     height: 15vw;
+    cursor: pointer;
 }
 
 .btn-bolo{
@@ -91,6 +97,7 @@
     justify-content: center;
     cursor: pointer;
 }
+
 .btn{
     font-family: "Rubik";
     font-weight: 500;
@@ -101,4 +108,9 @@
     width: 85px;
     height: 25px;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #F5EADD;
+    color: #531804;
 }

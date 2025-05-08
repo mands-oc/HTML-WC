@@ -7,7 +7,6 @@
 .boloint {
     /* background-color: blue; */
     height: 1000px;
-
 }
 
 .linha {
@@ -17,7 +16,6 @@
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .botao2 {
@@ -138,7 +136,7 @@
     margin-top: -15px;
 }
 
-.btn-menu {
+.btn-cart {
     font-family: 'Rubik';
     font-size: 16px;
     font-weight: 500;

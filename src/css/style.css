@@ -87,6 +87,7 @@ header{
     font-size: 18px; 
     text-align: end;
     margin-left: 5px;
+    cursor: pointer;
 }
 .icon-btn{
     /* background-color: cornflowerblue; */

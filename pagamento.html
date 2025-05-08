@@ -14,9 +14,11 @@
     <div id="pagina">
         <div class="principal corpo">
             <header>
-                <div class="logo">
-                    <img src="./src/imagens/Logotipo.png" alt="logotipo">
-                </div>
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="./src/imagens/Logotipo.png" alt="Logotipo Whole Cake">
+                    </div>
+                </a>
                 <div class="topo">
                     <div class="menu" id="menu">
                         <nav>
@@ -38,14 +40,16 @@
                     </div>
                     <div class="botao">
                         <div class="btn-icon">
-                            <img class="icon-btn" src="./src/imagens/Ícones/usuario-de-perfil.png" alt="">
-                            <button class="btn-menu">ENTRAR</button>
+                            <img class="icon-btn" src="./src/imagens/Ícones/usuario-de-perfil.png"
+                                alt="Ícone de perfil do usuário">
+                            <a href="entrar.html"><button class="btn-menu">ENTRAR</button></a>
 
                         </div>
                     </div>
                     <div class="carrinho">
-                        <img class="carrinho" src="./src/imagens/Ícones/carrinho-de-compras-marrom.png"
-                            alt="icon-carrinho de compras">
+                        <a href="carrinho.html"><img class="carrinho"
+                                src="./src/imagens/Ícones/carrinho-de-compras-marrom.png"
+                                alt="Ícone do carrinho de compras"></a>
                     </div>
                 </div>
             </header>
@@ -56,70 +60,70 @@
                 <div class="metodo-pagamento">
                     <div class="pagamento">
                         <img class="forma-de-pagamento" src="src/imagens/Ícones/pagamento-com-cartao-de-credito.png"
-                            alt="cartao-de-credito">
+                            alt="Cartão de crédito">
                         <button class="metodo" type="button">Cartão de Crédito</button>
                         <img class="verificacao" src="src/imagens/Ícones/marca-de-verificacao.png"
-                            alt="marca-de-verificacao">
+                            alt="Marca de verificação">
                     </div>
                     <div class="pagamento">
                         <img class="forma-de-pagamento" src="src/imagens/Ícones/pix.png" alt="pix">
                         <button class="metodo" type="button">PIX</button>
                         <img class="verificacao" src="src/imagens/Ícones/marca-de-verificacao.png"
-                            alt="marca-de-verificacao">
+                            alt="Marca de verificação">
                     </div>
                 </div>
                 <div class="formulario">
                     <form class="form" id="form" action="">
+                        <div class="controle-form">
+                            <label for="card-number">Número do cartão</label>
+                            <input type="text" id="card-number">
+                        </div>
+                        <div class="linha">
                             <div class="controle-form">
-                                <label for="card-number">Número do cartão</label>
-                                <input type="text" id="card-number">
-                            </div>
-                            <div class="linha">
-                                <div class="controle-form">
-                                    <label for="expiry-date">Data de validade</label>
-                                    <input type="text" id="expiry-date">
-                                </div>
-                                <div class="controle-form">
-                                    <label for="cvv">CVC/CVV</label>
-                                    <input type="text" id="cvv">
-                                </div>
+                                <label for="expiry-date">Data de validade</label>
+                                <input type="text" id="expiry-date">
                             </div>
                             <div class="controle-form">
-                                <label for="card-name">Nome impresso no cartão</label>
-                                <input type="text" id="card-name">
+                                <label for="cvv">CVC/CVV</label>
+                                <input type="text" id="cvv">
                             </div>
-                            <div class="controle-form">
-                                <label for="parcelas">Opções de Parcelamento</label>
-                                <select class="parcela" id="parcelas">
-                                    
-                                    <option>1x sem juros</option>
-                                    <option>2x sem juros</option>
-                                    <option>3x sem juros</option>
-                                </select>
-                            </div>
-                            <div class="ativacao">
-                                <input type="checkbox" id="">
-                                <label for="">O endereço da fatura do cartão é o mesmo da entrega</label>
-                            </div>
-                        
+                        </div>
+                        <div class="controle-form">
+                            <label for="card-name">Nome impresso no cartão</label>
+                            <input type="text" id="card-name">
+                        </div>
+                        <div class="controle-form">
+                            <label for="parcelas">Opções de Parcelamento</label>
+                            <select class="parcela" id="parcelas">
+
+                                <option>1x sem juros</option>
+                                <option>2x sem juros</option>
+                                <option>3x sem juros</option>
+                            </select>
+                        </div>
+                        <div class="ativacao">
+                            <input type="checkbox" id="">
+                            <label for="">O endereço da fatura do cartão é o mesmo da entrega</label>
+                        </div>
+
                         <div class="botao2">
-                            <button type="submit" id="finalizar">FINALIZAR COMPRA</button>
+                            <a href="avaliacao.html"><button type="submit" id="finalizar">FINALIZAR COMPRA</button></a>
                         </div>
                     </form>
                 </div>
-                
+
             </div>
         </div>
         <footer>
             <div class="icones">
                 <div class="email">
-                    <img src="./src/imagens/Ícones/o-email.png" alt="">
+                    <img src="./src/imagens/Ícones/o-email.png" alt="e-mail">
                     <p>doceriawholecake@outlook.com</p>
                 </div>
                 <div class="redes">
-                    <img src="./src/imagens/Ícones/facebook.png" alt="">
-                    <img src="./src/imagens/Ícones/whatsapp.png" alt="">
-                    <img src="./src/imagens/Ícones/instagram.png" alt="">
+                    <img src="./src/imagens/Ícones/facebook.png" alt="facebook">
+                    <img src="./src/imagens/Ícones/whatsapp.png" alt="whatsapp">
+                    <img src="./src/imagens/Ícones/instagram.png" alt="instagram">
                 </div>
             </div>
             <div class="desenvolvimento">
