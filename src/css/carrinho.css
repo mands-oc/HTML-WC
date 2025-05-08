@@ -3,6 +3,7 @@
     color: #531804;
     margin-top: 3%;
     margin-bottom: 3%;
+    margin-left: 11%;
 }
 
 .titulo h2 {
@@ -13,13 +14,14 @@
 
 .conteudo {
     display: flex;
+    justify-content: center;
 }
 
 
 .carrinho-info {
     display: flex;
     background-color: transparent;
-    width: 65%;
+    width: 50%;
     border: 1px solid #531804;
     border-radius: 10px;
     margin-bottom: 5%;

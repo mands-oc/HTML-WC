@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @font-face {
     font-family: 'nectarine';
     src: url("./nectarine/Nectarine.ttf")
@@ -153,17 +154,27 @@ header{
 
 .carrossel {
     height: 650px;
-    width: 1137.5px;
+    width: 100%;
+    max-width: 1137.5px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.carrossel img{
+ .carrossel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         
+    display: block;
+    aspect-ratio: 16 / 9;      
+    overflow: hidden;
+    position: relative;
+} 
+/* .carrossel img{
     height: 650px;
     width: 1137.5px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 .corpo1 {
     /* background-color:aqua; */
@@ -185,7 +196,7 @@ header{
 .categoria {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20vw;
     margin: 40px 20px;
     margin-bottom: 5vw;
@@ -235,24 +246,21 @@ header{
   }
   
 footer {
+    background-color: #531804;
     height: 200px;
     width: 100%;
-    background-color: #531804;
-    left: 0;
-    /*posição horizontal*/
-    bottom: 0;
-    /*posição vertical*/
+    left: 0; /*posição horizontal*/
+    bottom: 0; /*posição vertical*/
     position: absolute;
 }
 
 .icones {
+    /* background-color: blueviolet; */
     display: flex;
     justify-content: space-between;
     height: 130px;
     align-items: center;
-    width: 100%;
     padding-top: 2vw;
-    /* background-color: blueviolet; */
 }
 
 .icones p {
@@ -277,7 +285,7 @@ footer {
 }
 
 .desenvolvimento {
-    line-height: 70px;
+    line-height: 68px;
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
@@ -307,4 +315,56 @@ footer {
 .redes img {
     width: 40px;
     height: 40px;
+}
+
+/* Responsividade */
+/* Quando a largura máxima da página é 900px */
+@media screen and (max-width: 900px) {
+    .corpo1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .corpo1 h2 {
+        font-size: 24px;
+
+    } 
+
+    .carrossel img{
+        height: 60vh;
+        width: 70vh;
+    }
+
+      .imagem-legenda img {
+        height: 360px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .email {
+        padding-left: 5vw;
+      }
+
+      .email img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .redes {
+        width: 15%;
+      }
+
+      .redes img {
+        height: 30px;
+        width: 30px;
+      }
+
+      .icones p {
+        font-size: 16px;
+      }
+
+      .desenvolvimento p {
+        font-size: 12px;
+      }
 }
