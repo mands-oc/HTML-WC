@@ -111,26 +111,47 @@
     width: 25px;
 }
 
-.botao2 {
-    width: 100%;
+/* #finalizar {
+     width: 100%; 
     display: inline-flex;
     justify-content: center;
     margin-top: 5%;
     margin-bottom: 25px;
-}
+} */
 
-.botao2 button {
+/* #finalizar {
     background-color: #531804;
     color: #F5EADD;
     font-family: 'Inter';
     font-size: 14px;
     font-weight: 500;
-    /* width: 50%; */
-    width: 100%;
+    width: 50%;
     border: none;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
+} */
+
+#finalizar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; /* adiciona alinhamento vertical */
+    margin-top: 5%;
+    margin-bottom: 25px;
+
+    background-color: #531804;
+    color: #F5EADD;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    width: 50%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* remove sublinhado do link */
+    text-align: center;
 }
 
 .metodo-pagamento {
