@@ -7,16 +7,16 @@
 }
 
 .titulo {
-    /* background-color: brown; */
     color: #531804;
-    font-family: 'Rubik';
-    font-size: 20px;
-    font-weight: 600;
     text-align: center;
+    margin-top: 25px;
+    font-family: 'Rubik';
+
 }
 
-.titulo h2{
-    margin-top: 25px;
+.titulo h2 {
+    font-size: 25px;
+    font-weight: 600;
     letter-spacing: 0.05em;
 }
 
@@ -24,7 +24,7 @@
     background-color: transparent;
     margin-top: 5vh;
     width: 100%;
-    padding:  30px 20px;
+    padding: 30px 20px;
     border: 1px solid #531804;
     border-radius: 10px;
     margin-bottom: 80px;
@@ -55,7 +55,8 @@
     margin-right: 120px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* sombra */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* sombra */
     margin-top: 25px;
     margin-bottom: 25px;
     display: flex;
@@ -64,6 +65,6 @@
 }
 
 .opcao:hover {
-    transform: scale(1.05); /* aumenta 5% */
+    transform: scale(1.05);
+    /* aumenta 5% */
 }
-

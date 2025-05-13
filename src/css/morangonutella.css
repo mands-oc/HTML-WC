@@ -1,7 +1,6 @@
 .bolo-int img {
-    /* background-color: aqua; */
     height: 400px;
-    width: 540px;
+    width: 600px;
 }
 
 .boloint {
@@ -120,7 +119,6 @@
 
 
 .teste {
-    /* background-color: chartreuse; */
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
