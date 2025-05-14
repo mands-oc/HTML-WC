@@ -10,7 +10,7 @@ $(document).ready(function () {
             var table = $('#cadastro tbody') //transformo o corpo da tabela em uma variável
             $.each(data, function (index, item) {
                 table.append('<tr id="line">' +
-                    '<td>' + item.idProduto + '</td>' +
+                    '<td id="code">' + item.idProduto + '</td>' +
                     '<td>' + item.nomeProduto + '</td>' +
                     '<td>' + item.descricao + '</td>' +
                     '<td>' + item.valorUnit + '</td>' +
@@ -18,7 +18,6 @@ $(document).ready(function () {
                     '<td>' + item.imagem + '</td>' +
                     '<td>' + item.idCategoria + '</td>' +
                     '<td> <button type="button" class= "btn btn-success" data-bs-toggle= "modal" data-bs-target="#updateModal" data-id = "> ' + item.idProduto + 'id="btnEditar">Editar</button></td>' +
-
                     '<td> <button type="button" class= "btn btn-danger" data-bs-toggle= "modal" data-bs-target="#deleteModal" data-id = "> ' + item.idProduto + 'id="btnDelete">Excluir</button></td>'
                     + '</tr>'
                 )
@@ -68,6 +67,9 @@ $(document).ready(function () {
                         $('#addModal').modal('hide') //esconde o modal
                     })
                     location.reload(); //atualiza a página com o novo produto
+                },
+                error: function (err) {
+                    console.log(err)
                 }
             })
         } else {
@@ -76,4 +78,94 @@ $(document).ready(function () {
         }
 
     })
+
+    //Atualizando um produto - PUT
+    $(document).on('click', '#btnEditar', function() {
+        //recuperação do código do produto
+        let line = $(this).closest('tr');
+        let id = line.find('#code').text();
+        console.log(id)
+
+        //Recuperação dos dados do banco - GET
+
+        $.ajax({
+            url: 'http://localhost:3333/produtos/' + id,
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#u-nome').val(data.nomeProduto);
+                $('#u-descricao').val(data.descricao);
+                $('#u-valor').val(data.valorUnit);
+                $('#u-estoque').val(data.estoque);
+                $('#u-imagem').val(data.imagem);
+
+            },
+            error: function (error) {
+                console.log(error)
+                console.log('Não foi possível recuperar os dados do produto.')
+            }
+        })
+
+        //Alterando os dados - PUT
+        $(document).on('click', 'btnAlterar', function(){
+            let novoNome = $('#u-nome').val();
+            let novaDesc = $('#u-descricao').val();
+            let novoValor = $('#u-valor').val().replace(',' , '.');
+            let novaImagem = $('#u-imagem').val();
+
+            //Verificar se os campos estão em branco
+            if (novoNome != '' && novaDesc != '' && novoValor != '' && novaImagem != '') {
+                //Envia a requisição
+                $.ajax({
+                    url: 'http://localhost:3333/produtos/' + id,
+                    method: 'PUT',
+                    dataType: 'json',
+                    data: {
+                        nomeProduto: novoNome,
+                        descricao: novaDesc,
+                        valorUnit: novoValor,
+                        imagem: novaImagem
+                    },
+                    success: function() {
+                        alert('Produto atualizado com sucesso!');
+                        $('#updateModal').modal('hide');
+                        location.reload();
+                    },
+                    error: function (error) {
+                        alert('Não foi possível atualizar o produto.');
+                        $('#updateModal').modal('hide');
+                        console.log(error);
+                        location.reload();
+                    }
+                })
+            } else{
+                alert('Falha ao atualizar o produto.')
+            }
+        })
+
+    })
+
+//Excluindo um produto - DELETE
+$(document).on('click', '#btnDelete', function(){
+    //Verificando o id do produto
+    let line = $(this).closest('tr');
+    let id = line.find('#code').text();
+
+    $(document).on('click', 'btnSim', function(){
+        $.ajax({
+            url: 'http://localhost:3333/produtos/' + id,
+            method: 'DELETE',
+            success: function(){
+                line.remove(); //Remover a linha do produto
+                alert('Produto excluído com sucesso!')
+                location.reload();
+            },
+            error: function(error){
+                console.log('Não foi possível excluir o produto.')
+                console.log(error);
+                $('updateModal').modal('hide')
+            }
+        })
+    })
+})
 });

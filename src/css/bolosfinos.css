@@ -90,6 +90,10 @@
     cursor: pointer;
 }
 
+.bolo img:hover{
+    transform: scale(1.15);
+}
+
 .btn-bolo{
     /* background-color: blueviolet; */
     width: 100px;

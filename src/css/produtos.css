@@ -4,3 +4,21 @@ h2 {
     margin-top: 5%;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+.btn-success {
+    --bs-btn-color: #971010;
+    --bs-btn-bg: #4227bd;
+    --bs-btn-border-color: #1f1258;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #157347;
+    --bs-btn-hover-border-color: #146c43;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #146c43;
+    --bs-btn-active-border-color: #13653f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #198754;
+    --bs-btn-disabled-border-color: #198754;
+}
