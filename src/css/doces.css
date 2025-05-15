@@ -44,6 +44,11 @@
     height: 10vw;
     cursor: pointer;
 }
+
+.doce img:hover{
+    transform: scale(1.15);
+}
+
 .linha{
     /* background-color: aqua; */
     display: flex;
