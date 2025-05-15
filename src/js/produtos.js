@@ -27,6 +27,7 @@ $(document).ready(function () {
 
     //Cadastro de produtos - POST
     $('#btnSalvar').on('click', function () { //Quando o botão salvar for clicado 
+        console.log('')
         $('#form').on('click', function (event) {
             event.preventDefault();
         }); //previne o envio do formulário em branco
@@ -111,10 +112,11 @@ $(document).ready(function () {
             let novoNome = $('#u-nome').val();
             let novaDesc = $('#u-descricao').val();
             let novoValor = $('#u-valor').val().replace(',' , '.');
+            let novoEstoque = $('#u-descricao').val()
             let novaImagem = $('#u-imagem').val();
 
             //Verificar se os campos estão em branco
-            if (novoNome != '' && novaDesc != '' && novoValor != '' && novaImagem != '') {
+            if (novoNome != '' && novaDesc != '' && novoValor != '' && novaImagem != '' && novoEstoque != '') {
                 //Envia a requisição
                 $.ajax({
                     url: 'http://localhost:3333/produtos/' + id,
@@ -124,7 +126,9 @@ $(document).ready(function () {
                         nomeProduto: novoNome,
                         descricao: novaDesc,
                         valorUnit: novoValor,
+                        estoque: novoEstoque,
                         imagem: novaImagem
+
                     },
                     success: function() {
                         alert('Produto atualizado com sucesso!');
