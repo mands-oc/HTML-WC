@@ -7,43 +7,42 @@ h2 {
 
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #9b3e7a; /* padrão */
-    --bs-btn-border-color: #9b3e7a;
+    --bs-btn-bg: #a55c91; /* tom entre roxo e rosa, combinando com "Editar" */
+    --bs-btn-border-color: #a55c91;
 
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #852e67; /* hover mais escuro */
-    --bs-btn-hover-border-color: #7a2a5e;
+    --bs-btn-hover-bg: #944e80;
+    --bs-btn-hover-border-color: #874574;
 
-    --bs-btn-focus-shadow-rgb: 155, 62, 122; /* cor base em RGB para foco */
+    --bs-btn-focus-shadow-rgb: 165, 92, 145;
 
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #6d2552; /* active ainda mais escuro */
-    --bs-btn-active-border-color: #611f4a;
+    --bs-btn-active-bg: #7e3f6b;
+    --bs-btn-active-border-color: #73385f;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #d8a9c5; /* tom bem claro da cor base */
-    --bs-btn-disabled-border-color: #d8a9c5;
+    --bs-btn-disabled-bg: #dfbdd3;
+    --bs-btn-disabled-border-color: #dfbdd3;
 }
-
 
 .btn-success { 
     --bs-btn-color: #fff;
-    --bs-btn-bg: #a76b96; /* lavanda queimado mais escuro */
-    --bs-btn-border-color: #a76b96;
+    --bs-btn-bg: #a55c91; /* mesmo base do primário */
+    --bs-btn-border-color: #a55c91;
 
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #945a84; /* hover mais escuro */
-    --bs-btn-hover-border-color: #875078;
+    --bs-btn-hover-bg: #944e80;
+    --bs-btn-hover-border-color: #874574;
 
-    --bs-btn-focus-shadow-rgb: 167, 107, 150;
+    --bs-btn-focus-shadow-rgb: 165, 92, 145;
 
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #80476e; /* active ainda mais escuro */
-    --bs-btn-active-border-color: #743f63;
+    --bs-btn-active-bg: #7e3f6b;
+    --bs-btn-active-border-color: #73385f;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #d1b3ca; /* versão escurecida do original disabled */
-    --bs-btn-disabled-border-color: #d1b3ca;
+    --bs-btn-disabled-bg: #dfbdd3;
+    --bs-btn-disabled-border-color: #dfbdd3;
 }

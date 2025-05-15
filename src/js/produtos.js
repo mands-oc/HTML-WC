@@ -7,7 +7,7 @@ $(document).ready(function () {
         dataType: 'json', //tipo de dados
         success: function (data) {
             console.log(data)
-            var table = $('#cadastro tbody') //transformo o corpo da tabela em uma variável
+            var table = $('#cadastro tbody') //transforma o corpo da tabela em uma variável
             $.each(data, function (index, item) {
                 table.append('<tr id="line">' +
                     '<td id="code">' + item.idProduto + '</td>' +
@@ -17,18 +17,19 @@ $(document).ready(function () {
                     '<td>' + item.estoque + '</td>' +
                     '<td>' + item.imagem + '</td>' +
                     '<td>' + item.idCategoria + '</td>' +
-                    '<td> <button type="button" class= "btn btn-success" data-bs-toggle= "modal" data-bs-target="#updateModal" data-id = "> ' + item.idProduto + 'id="btnEditar">Editar</button></td>' +
-                    '<td> <button type="button" class= "btn btn-danger" data-bs-toggle= "modal" data-bs-target="#deleteModal" data-id = "> ' + item.idProduto + 'id="btnDelete">Excluir</button></td>'
-                    + '</tr>'
-                )
-            })
+                    '<td> <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#updateModal" data-id="' + item.idProduto + '" id="btnEditar">Editar</button></td>' +
+                    '<td> <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="' + item.idProduto + '" id="btnDelete">Excluir</button></td>' +
+                    '</tr>'
+                );
+            });
         }
     })
 
+
     //Cadastro de produtos - POST
     $('#btnSalvar').on('click', function () { //Quando o botão salvar for clicado 
-        console.log('')
-        $('#form').on('click', function (event) {
+        console.log('oi')
+        $('#form').on('submit', function (event) {
             event.preventDefault();
         }); //previne o envio do formulário em branco
 
@@ -44,7 +45,7 @@ $(document).ready(function () {
         let idCategoria = $('#m-categoria').val();
 
         //verifica se todos os campos obrigatórios estão preenchidos
-        if (idProduto != '' && nomeProduto != '' && descricao != '' && valor != '' && estoque != ''  && imagem != '' && idCategoria != '' ) {
+        if (idProduto != '' && nomeProduto != '' && descricao != '' && valor != '' && estoque != '' && imagem != '' && idCategoria != '') {
             //envia o POST
 
             $.ajax({
@@ -81,7 +82,7 @@ $(document).ready(function () {
     })
 
     //Atualizando um produto - PUT
-    $(document).on('click', '#btnEditar', function() {
+    $(document).on('click', '#btnEditar', function () {
         //recuperação do código do produto
         let line = $(this).closest('tr');
         let id = line.find('#code').text();
@@ -94,6 +95,7 @@ $(document).ready(function () {
             method: 'GET',
             dataType: 'json',
             success: function (data) {
+                // console.log(data)
                 $('#u-nome').val(data.nomeProduto);
                 $('#u-descricao').val(data.descricao);
                 $('#u-valor').val(data.valorUnit);
@@ -108,15 +110,15 @@ $(document).ready(function () {
         })
 
         //Alterando os dados - PUT
-        $(document).on('click', 'btnAlterar', function(){
+        $(document).on('click', '#btnAlterar', function () {
             let novoNome = $('#u-nome').val();
             let novaDesc = $('#u-descricao').val();
-            let novoValor = $('#u-valor').val().replace(',' , '.');
-            let novoEstoque = $('#u-descricao').val()
+            let novoValor = $('#u-valor').val().replace(',', '.');
+            let novoEstoque = $('#u-estoque').val()
             let novaImagem = $('#u-imagem').val();
 
             //Verificar se os campos estão em branco
-            if (novoNome != '' && novaDesc != '' && novoValor != '' && novaImagem != '' && novoEstoque != '') {
+            if (novoNome != '' && novaDesc != '' && novoValor != '' && novoEstoque != '' && novaImagem != '') {
                 //Envia a requisição
                 $.ajax({
                     url: 'http://localhost:3333/produtos/' + id,
@@ -130,7 +132,7 @@ $(document).ready(function () {
                         imagem: novaImagem
 
                     },
-                    success: function() {
+                    success: function () {
                         alert('Produto atualizado com sucesso!');
                         $('#updateModal').modal('hide');
                         location.reload();
@@ -142,34 +144,34 @@ $(document).ready(function () {
                         location.reload();
                     }
                 })
-            } else{
+            } else {
                 alert('Falha ao atualizar o produto.')
             }
         })
 
     })
 
-//Excluindo um produto - DELETE
-$(document).on('click', '#btnDelete', function(){
-    //Verificando o id do produto
-    let line = $(this).closest('tr');
-    let id = line.find('#code').text();
+    //Excluindo um produto - DELETE
+    $(document).on('click', '#btnDelete', function () {
+        //Verificando o id do produto
+        let line = $(this).closest('tr');
+        let id = line.find('#code').text();
 
-    $(document).on('click', 'btnSim', function(){
-        $.ajax({
-            url: 'http://localhost:3333/produtos/' + id,
-            method: 'DELETE',
-            success: function(){
-                line.remove(); //Remover a linha do produto
-                alert('Produto excluído com sucesso!')
-                location.reload();
-            },
-            error: function(error){
-                console.log('Não foi possível excluir o produto.')
-                console.log(error);
-                $('updateModal').modal('hide')
-            }
+        $(document).on('click', '#btnSim', function () {
+            $.ajax({
+                url: 'http://localhost:3333/produtos/' + id,
+                method: 'DELETE',
+                success: function () {
+                    line.remove(); //Remover a linha do produto
+                    alert('Produto excluído com sucesso!')
+                    location.reload();
+                },
+                error: function (error) {
+                    console.log('Não foi possível excluir o produto.')
+                    console.log(error);
+                    $('updateModal').modal('hide')
+                }
+            })
         })
     })
-})
 });
