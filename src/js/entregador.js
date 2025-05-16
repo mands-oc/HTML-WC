@@ -2,7 +2,7 @@
 $(document).ready(function () {
     //READ - GET - Mostrar os elementos na tela
     $.ajax({
-        url: 'http://localhost:3333/produtos', //endereço
+        url: 'http://localhost:3333/entregadores', //endereço
         method: 'GET', //tipo de requisição
         dataType: 'json', //tipo de dados
         success: function (data) {
@@ -10,15 +10,12 @@ $(document).ready(function () {
             var table = $('#cadastro tbody') //transforma o corpo da tabela em uma variável
             $.each(data, function (index, item) {
                 table.append('<tr id="line">' +
-                    '<td id="code">' + item.idProduto + '</td>' +
-                    '<td>' + item.nomeProduto + '</td>' +
-                    '<td>' + item.descricao + '</td>' +
-                    '<td>' + item.valorUnit + '</td>' +
-                    '<td>' + item.estoque + '</td>' +
-                    '<td>' + item.imagem + '</td>' +
-                    '<td>' + item.idCategoria + '</td>' +
-                    '<td> <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#updateModal" data-id="' + item.idProduto + '" id="btnEditar">Editar</button></td>' +
-                    '<td> <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="' + item.idProduto + '" id="btnDelete">Excluir</button></td>' +
+                    '<td id="code">' + item.idEntregador + '</td>' +
+                    '<td>' + item.nomeEntregador + '</td>' +
+                    '<td>' + item.cnh + '</td>' +
+                    '<td>' + item.telefoneEntregador + '</td>' +
+                    '<td> <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#updateModal" data-id="' + item.idEntregador + '" id="btnEditar">Editar</button></td>' +
+                    '<td> <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="' + item.idEntregador + '" id="btnDelete">Excluir</button></td>' +
                     '</tr>'
                 );
             });
@@ -26,7 +23,7 @@ $(document).ready(function () {
     })
 
 
-    //Cadastro de produtos - POST
+    //Cadastro de entregadores - POST
     $('#btnSalvar').on('click', function () { //Quando o botão salvar for clicado 
         console.log('oi')
         $('#form').on('submit', function (event) {
@@ -36,37 +33,31 @@ $(document).ready(function () {
 
         // ler o conteúdo dos inputs e armazená-los em variáveis
 
-        let nomeProduto = $('#m-nome').val();
-        let descricao = $('#m-descricao').val();
-        let valor = $('#m-valor').val().replace(',', '.'); //substitui a vírgula pelo ponto para enviar para o banco de dados
-        let estoque = $('#m-estoque').val();
-        let imagem = $('#m-imagem').val();
-        let idCategoria = $('#m-categoria').val();
+        let nomeEntregador = $('#m-nome').val();
+        let cnh = $('#m-cnh').val();
+        let telefone = $('#m-telefone').val();
 
         //verifica se todos os campos obrigatórios estão preenchidos
-        if (nomeProduto != '' && descricao != '' && valor != '' && estoque != '' && imagem != '' && idCategoria != '') {
+        if (nomeEntregador != '' && cnh != '' && telefone != '') {
             //envia o POST
 
             $.ajax({
-                url: 'http://localhost:3333/produtos',
+                url: 'http://localhost:3333/entregadores',
                 method: 'POST',
                 cache: false,
                 dataType: 'json',
                 data: {
-                    nomeProduto: nomeProduto,
-                    descricao: descricao,
-                    valorUnit: valor,
-                    estoque: estoque,
-                    imagem: imagem,
-                    idCategoria: idCategoria
+                    nomeEntregador: nomeEntregador,
+                    cnh: cnh,
+                    telefoneEntregador: contato
                 },
                 success: function () {
-                    alert('Produto cadastrado com sucesso!') //emito um alerta para o usuário
+                    alert('Entregador cadastrado com sucesso!') //emito um alerta para o usuário
                     $('#form').each(function () { //a cada envio 
                         this.reset(); //Limpa o formulário 
                         $('#addModal').modal('hide') //esconde o modal
                     })
-                    location.reload(); //atualiza a página com o novo produto
+                    location.reload(); //atualiza a página com o novo entregador
                 },
                 error: function (err) {
                     console.log(err)
@@ -79,9 +70,9 @@ $(document).ready(function () {
 
     })
 
-    //Atualizando um produto - PUT
+    //Atualizando um entregador - PUT
     $(document).on('click', '#btnEditar', function () {
-        //recuperação do código do produto
+        //recuperação do código do entregador
         let line = $(this).closest('tr');
         let id = line.find('#code').text();
         console.log(id)
@@ -89,83 +80,74 @@ $(document).ready(function () {
         //Recuperação dos dados do banco - GET
 
         $.ajax({
-            url: 'http://localhost:3333/produtos/' + id,
+            url: 'http://localhost:3333/entregadores/' + id,
             method: 'GET',
             dataType: 'json',
             success: function (data) {
                 // console.log(data)
-                $('#u-nome').val(data.nomeProduto);
-                $('#u-descricao').val(data.descricao);
-                $('#u-valor').val(data.valorUnit);
-                $('#u-estoque').val(data.estoque);
-                $('#u-imagem').val(data.imagem);
-
+                $('#u-nome').val(data.nomeEntregador);
+                $('#u-cnh').val(data.cnh);
+                $('#u-contato').val(data.telefoneEntregador);
             },
             error: function (error) {
                 console.log(error)
-                console.log('Não foi possível recuperar os dados do produto.')
+                console.log('Não foi possível recuperar os dados do entregador.')
             }
         })
 
         //Alterando os dados - PUT
         $(document).on('click', '#btnAlterar', function () {
             let novoNome = $('#u-nome').val();
-            let novaDesc = $('#u-descricao').val();
-            let novoValor = $('#u-valor').val().replace(',', '.');
-            let novoEstoque = $('#u-estoque').val();
-            let novaImagem = $('#u-imagem').val();
+            let novoTel = $('#u-contato').val();
 
             //Verificar se os campos estão em branco
-            if (novoNome != '' && novaDesc != '' && novoValor != '' && novoEstoque != '' && novaImagem != '') {
+            if (novoNome != '' && novoTel != '' ) {
                 //Envia a requisição
                 $.ajax({
-                    url: 'http://localhost:3333/produtos/' + id,
+                    url: 'http://localhost:3333/entregadores/' + id,
                     method: 'PUT',
                     dataType: 'json',
                     data: {
-                        nomeProduto: novoNome,
-                        descricao: novaDesc,
-                        valorUnit: novoValor,
-                        estoque: novoEstoque,
-                        imagem: novaImagem
-
+                        nomeEntregador: novoNome,
+                        telefoneEntregador: novoTel,
+                      
                     },
                     success: function () {
-                        alert('Produto atualizado com sucesso!');
+                        alert('Entregador atualizado com sucesso!');
                         $('#updateModal').modal('hide');
                         location.reload();
                     },
                     error: function (error) {
-                        alert('Não foi possível atualizar o produto.');
+                        alert('Não foi possível atualizar o entregador.');
                         $('#updateModal').modal('hide');
                         console.log(error);
                         location.reload();
                     }
                 })
             } else {
-                alert('Falha ao atualizar o produto.')
+                alert('Falha ao atualizar o entregador.')
             }
         })
 
     })
 
-    //Excluindo um produto - DELETE
+    //Excluindo um entregador - DELETE
     $(document).on('click', '#btnDelete', function () {
-        //Verificando o id do produto
+        //Verificando o id do entregador
         let line = $(this).closest('tr');
         let id = line.find('#code').text();
 
         $(document).on('click', '#btnSim', function () {
             $.ajax({
-                url: 'http://localhost:3333/produtos/' + id,
+                url: 'http://localhost:3333/entregadores/' + id,
                 method: 'DELETE',
                 success: function () {
-                    line.remove(); //Remover a linha do produto
-                    alert('Produto excluído com sucesso!')
+                    line.remove(); //Remover a linha do entregador
+                    alert('Entregador excluído com sucesso!')
                     location.reload();
                 },
                 error: function (error) {
-                    console.log('Não foi possível excluir o produto.')
+                    console.log('Não foi possível excluir o entregador.')
                     console.log(error);
                     $('updateModal').modal('hide')
                 }
