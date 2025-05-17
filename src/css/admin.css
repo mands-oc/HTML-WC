@@ -19,6 +19,7 @@ header {
 h1 {
     font-family: 'Rubik';
     font-size: 26px;
+    font-weight: 500;
 }
 
 h3 {
@@ -121,6 +122,7 @@ main {
 .topo {
     background-color: #A76A91;
     height: 60%;
+    width: 82%;
     margin-top: 7%;
 }
 
