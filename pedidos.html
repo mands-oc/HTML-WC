@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | Whole Cake</title>
+    <link rel="shortcut icon" href="src/imagens/Logotipo.png" type="logotipo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/produtos.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="text-center p-3 mb-5">
+                <!-- bg-body-primary shadow -->
+                <!-- text-center = centraliza o texto / bg-body = background / p-3 = padding / mb-5 = margin bottom -->
+                <h2>Gestão de Pedidos</h2>
+            </div>
+            <table id="cadastro" class="table table-danger table-striped table-hover mt-5">
+                <thead>
+                    <tr>
+                        <th id="id" scope="col">Código</th>
+                        <th id="nome" scope="col">CPF</th>
+                        <th id="cnh" scope="col">Data pedido</th>
+                        <th id="telefone" scope="col">Quantidade de itens</th>
+                        <th id="telefone" scope="col">Valor Total</th>
+                        <th id="telefone" scope="col">Forma de pagamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- O corpo da tabela será preenchido pelo javascript com as informações enviadas pelo banco de dados -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.5.2.js"
+        integrity="sha256-ThFcNr/v1xKVt5cmolJIauUHvtXFOwwqiTP7IbgP8EU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./src/js/pedidos.js"></script>
+</body>
+
+</html>

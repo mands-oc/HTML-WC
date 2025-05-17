@@ -49,7 +49,7 @@ $(document).ready(function () {
                 data: {
                     nomeEntregador: nomeEntregador,
                     cnh: cnh,
-                    telefoneEntregador: contato
+                    telefoneEntregador: telefone
                 },
                 success: function () {
                     alert('Entregador cadastrado com sucesso!') //emito um alerta para o usuário
@@ -87,7 +87,7 @@ $(document).ready(function () {
                 // console.log(data)
                 $('#u-nome').val(data.nomeEntregador);
                 $('#u-cnh').val(data.cnh);
-                $('#u-contato').val(data.telefoneEntregador);
+                $('#u-telefone').val(data.telefoneEntregador);
             },
             error: function (error) {
                 console.log(error)
@@ -97,11 +97,11 @@ $(document).ready(function () {
 
         //Alterando os dados - PUT
         $(document).on('click', '#btnAlterar', function () {
-            let novoNome = $('#u-nome').val();
-            let novoTel = $('#u-contato').val();
+            let novoNome = $('#u-nome').val();  
+            let novoTelefone = $('#u-telefone').val();
 
             //Verificar se os campos estão em branco
-            if (novoNome != '' && novoTel != '' ) {
+            if (novoNome != '' && novoTelefone != '' ) {
                 //Envia a requisição
                 $.ajax({
                     url: 'http://localhost:3333/entregadores/' + id,
@@ -109,7 +109,7 @@ $(document).ready(function () {
                     dataType: 'json',
                     data: {
                         nomeEntregador: novoNome,
-                        telefoneEntregador: novoTel,
+                        telefoneEntregador: novoTelefone,
                       
                     },
                     success: function () {

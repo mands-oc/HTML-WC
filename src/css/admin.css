@@ -1,7 +1,129 @@
+/* header {
+    background-color: #A76A91;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    height: 150px;
+    display: flex;
+} */
+
+header {
+    color: white;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+}
+
 h1 {
     font-family: 'Rubik';
-    font-size: 30px;
+    font-size: 26px;
+}
+
+h3 {
+    font-family: 'Rubik';
+    font-size: 22px;
     color: #531804;
+    
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* background-color: #ffe4ec; */
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background: white;
+    border: 2px solid #A76A91;
+    color: #A76A91;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button.active {
+    background-color: #A76A91;
+    color: white;
+}
+
+section {
+    padding: 2rem;
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.produto {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.produto img {
+    max-width: 100px;
+}
+
+.botao-novo {
+    background: #ff69b4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    .produtos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+.link-bloco {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.link-bloco .produto {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.link-bloco .produto:hover {
+    transform: scale(1.03);
+}
+
+main {
+    margin-top: 10%;
+}
+
+.logotipo {
+    margin-top: 4%;
+}
+
+.topo {
+    background-color: #A76A91;
+    height: 60%;
+    margin-top: 7%;
+}
+
+.topo h1 {
+    margin: auto;
+}
